@@ -49,8 +49,8 @@ namespace Task__4_1
             int[,] matrixSum = new int[RowsCount, ColumnsCount];
 
             WriteLine("\nMatrix 2:");
-            // здесь разобью на два цикла, чтоб была видна логика, хотя посоветуйте, может и не надо
-            // заполняем вторую матрицу
+
+            // заполняем рандом вторую матрицу
             for (int i = 0; i < RowsCount; i++)
             {
                 for (int j = 0; j < ColumnsCount; j++)
