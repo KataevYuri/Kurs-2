@@ -107,9 +107,10 @@ namespace home_work_3
             WriteLine($"Минимальное число из введенных = {min}");
             ReadKey();
 
-            //  Task 5 угадай число
+            //Task 5 угадай число
             Random RandGen = new Random();
             Write("Введите максимальное число диапазона: ");
+
             int RangeMax = int.Parse(ReadLine());
             int RandomNum = RandGen.Next(1,RangeMax);
             while (true)
@@ -129,12 +130,14 @@ namespace home_work_3
                 if (curentNum < RandomNum)
                     WriteLine("Это число меньше загаданного");
                 
-                else if (curentNum < RandomNum)
+                // издержки копирования. нужно было поставить  знак больше
+                else if (curentNum > RandomNum)
                     WriteLine("Это число больше загаданного");
                 
                 else
                 {
                     WriteLine("Вы угадали!");
+                    
                     break;
                 }
             }
