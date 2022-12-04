@@ -11,7 +11,7 @@ namespace home_work_3
     {
         static void Main(string[] args)
         {
-
+            /* проверенные задачи
             // Task 1
             Write("Введите целое чиcло: ");
             int num = int.Parse(ReadLine());
@@ -19,7 +19,7 @@ namespace home_work_3
             string s = (num % 2 == 0) ? "Это четное число" : "Это нечетное число";
             WriteLine(s);
             ReadKey();
-
+            
             // Task 2
 
             Write("Сколько у вас карт на руках: ");
@@ -106,6 +106,9 @@ namespace home_work_3
             }
             WriteLine($"Минимальное число из введенных = {min}");
             ReadKey();
+
+            */
+
 
             //Task 5 угадай число
             Random RandGen = new Random();
