@@ -85,8 +85,8 @@ namespace Home_Work_6
             
             if (fio.Length>0 && age.Length>0 && height.Length>0 && birthday.Length>0 && birthplace.Length>0)
             {
-                string _text = $"#{data.Length+1}|{DateTime.Now.ToString("dd.MM.yyyy HH:mm")}" +
-                               $"|{fio}|{age}|{height}|{birthday}|{birthplace}";
+                string _text = $"#{data.Length+1}#{DateTime.Now.ToString("dd.MM.yyyy HH:mm")}" +
+                               $"#{fio}#{age}#{height}#{birthday}#{birthplace}";
                 Array.Resize(ref data, data.Length + 1);
                 data[data.Length - 1] = _text;
                 return true;
