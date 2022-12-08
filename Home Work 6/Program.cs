@@ -19,7 +19,7 @@ namespace Home_Work_6
 
                 Console.WriteLine("-- Введите 1 для вывода файла");
                 Console.WriteLine("-- Введите 2 для ввода новых данных");
-                Console.WriteLine("-- Любой символ для выхода из программы");
+                Console.WriteLine("-- Enter для выхода из программы");
 
                 string input = Console.ReadLine();
                 switch (input)
@@ -64,8 +64,13 @@ namespace Home_Work_6
 
         static private void PrintData()
         {
-            for (int i=0; i<data.Length; i++)
-                Console.WriteLine(data[i]);
+            for (int i = 0; i < data.Length; i++)
+            {
+                //Console.WriteLine(data[i]);
+                string [] elems = data[i].Split('#');
+                if (elems.Length == 7)
+                    Console.WriteLine($"ФИО: {elems[2]} Возраст: {elems[3]} Рост: {elems[4]} Дата рождения: {elems[5]} Место рождения: {elems[6]}");
+            }
 
         }
 
@@ -85,7 +90,7 @@ namespace Home_Work_6
             
             if (fio.Length>0 && age.Length>0 && height.Length>0 && birthday.Length>0 && birthplace.Length>0)
             {
-                string _text = $"#{data.Length+1}#{DateTime.Now.ToString("dd.MM.yyyy HH:mm")}" +
+                string _text = $"{data.Length+1}#{DateTime.Now.ToString("dd.MM.yyyy HH:mm")}" +
                                $"#{fio}#{age}#{height}#{birthday}#{birthplace}";
                 Array.Resize(ref data, data.Length + 1);
                 data[data.Length - 1] = _text;
